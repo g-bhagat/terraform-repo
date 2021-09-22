@@ -8,6 +8,7 @@ pipeline {
     stages {
       stage('fetch_code') {
         steps {
+	  git branch: 'jenkinsfile'
           git credentialsId: 'github_creds', url: 'https://github.com/gs-byte/terraform-repo/'
         }
       }
