@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-      stage('fetch_latest_code') {
+      stage('fetch_code') {
         steps {
           git credentialsId: 'github_creds', url: 'https://github.com/gs-byte/terraform-repo/'
         }
